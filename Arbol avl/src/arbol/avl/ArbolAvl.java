@@ -16,17 +16,28 @@ public class ArbolAvl {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        int op, num;
+        int op;
         Metodos arbol= new Metodos();
         do {
             op = arbol.menu();
             switch (op){
-            
-                case -> 1{ 
-                System.out.printf();
-            }
-            }
-            
+                case 1 -> { 
+                System.out.println("Valor a ingresar:");
+                int num = arbol.entrada.nextInt();
+                arbol.raiz  = arbol.insertarAvl(op, arbol.raiz);
+                }
+                case 2 ->{
+                    arbol.preOrden(arbol.raiz);
+                    arbol.inOrden(arbol.raiz);
+                    arbol.postOrden(arbol.raiz);
+                }
+                case 3 ->{
+                    System.out.println("Valor a eliminar:");
+                    int num = arbol.entrada.nextInt();
+                    arbol.raiz  = arbol.eliminar(num, arbol.raiz);
+                }
+        
+            }    
         } while (op!=0);
         
     }
